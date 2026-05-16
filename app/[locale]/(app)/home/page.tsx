@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
 import { Avatar } from '@/components/ui/avatar';
+import { InviteButton } from '@/components/ui/invite-button';
 
 export const metadata: Metadata = { title: 'בית | Allay' };
 
@@ -107,13 +108,7 @@ export default async function HomePage({
       {/* ─── Quick stats ──────────────────────────────── */}
       <div className="grid grid-cols-2 gap-3">
         {(friendCount ?? 0) === 0 ? (
-          <Link
-            href={`/${locale}/search?tab=people`}
-            className="card col-span-1 flex flex-col items-center justify-center py-4 gap-1 hover:border-allay-blue/30 transition-colors text-center"
-          >
-            <span className="text-xl">👥</span>
-            <p className="text-xs font-semibold text-allay-blue">הזמינו חברים →</p>
-          </Link>
+          <InviteButton className="card col-span-1 flex flex-col items-center justify-center py-4 gap-1 hover:border-allay-blue/30 transition-colors text-center w-full" />
         ) : (
           <Link href={`/${locale}/friends`} className="card text-center py-4 hover:border-allay-blue/30 transition-colors">
             <p className="text-2xl font-bold text-allay-blue">{friendCount ?? 0}</p>
