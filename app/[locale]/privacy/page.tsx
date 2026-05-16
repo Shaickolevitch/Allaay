@@ -1,106 +1,54 @@
-import Link from 'next/link';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'מדיניות פרטיות',
-};
-
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-slate-50" dir="rtl">
-      <div className="max-w-2xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="mb-10">
-          <Link href="/he/home" className="text-allay-blue text-sm hover:underline">
-            ← חזרה
-          </Link>
-          <h1 className="text-2xl font-bold text-allay-dark mt-4">מדיניות פרטיות</h1>
-          <p className="text-sm text-allay-muted mt-1">עדכון אחרון: מאי 2026</p>
-        </div>
+    <main className="max-w-2xl mx-auto px-6 py-12 text-sm leading-relaxed" dir="rtl">
+      <h1 className="text-2xl font-bold mb-6">מדיניות פרטיות – אלאay</h1>
+      <p className="mb-4 text-gray-500">עדכון אחרון: מאי 2026</p>
 
-        <div className="card space-y-6 text-sm text-allay-dark leading-relaxed">
+      <section className="mb-6">
+        <h2 className="font-semibold text-base mb-2">מה אנחנו אוספים</h2>
+        <p>
+          כאשר אתם נרשמים לאלאay אנחנו אוספים את המידע שאתם בוחרים לספק: שם,
+          תמונת פרופיל, מספר טלפון (לאימות), וקישורים שאתם מוסיפים לפרופיל שלכם.
+          אם נכנסתם דרך Google או Facebook, אנחנו מקבלים את המידע הבסיסי שהספק
+          שולח (שם, כתובת דוא"ל, תמונה).
+        </p>
+      </section>
 
-          <section>
-            <h2 className="font-bold text-base mb-2">1. מבוא</h2>
-            <p>
-              Allaay («אנחנו», «השירות») היא פלטפורמת המלצות חברתית המאפשרת למשתמשים לשתף
-              המלצות על עסקים בתוך הרשת החברתית שלהם. מדיניות פרטיות זו מסבירה אילו מידע
-              אנו אוספים, כיצד אנו משתמשים בו ואיך אנו מגנים עליו.
-            </p>
-          </section>
+      <section className="mb-6">
+        <h2 className="font-semibold text-base mb-2">איך אנחנו משתמשים במידע</h2>
+        <p>
+          המידע משמש אך ורק להפעלת השירות: הצגת הפרופיל שלכם לחברים, חיבור
+          גרף ההמלצות, ושליחת התראות רלוונטיות. אנחנו לא מוכרים מידע לצד שלישי
+          ולא משתמשים בו לפרסום.
+        </p>
+      </section>
 
-          <section>
-            <h2 className="font-bold text-base mb-2">2. מידע שאנו אוספים</h2>
-            <ul className="list-disc list-inside space-y-1 text-allay-muted">
-              <li>פרטי חשבון: שם, כתובת דואר אלקטרוני, תמונת פרופיל</li>
-              <li>נתוני שימוש: המלצות, דירוגים, תגובות ופעולות בפלטפורמה</li>
-              <li>נתוני כניסה: ספק OAuth שבחרתם (Google, Apple, Facebook)</li>
-              <li>מידע טכני: כתובת IP, סוג דפדפן, זמני גישה</li>
-            </ul>
-          </section>
+      <section className="mb-6">
+        <h2 className="font-semibold text-base mb-2">שיתוף מידע</h2>
+        <p>
+          המידע הציבורי בפרופיל שלכם (שם, תמונה, קישורים) גלוי למשתמשים אחרים
+          באפליקציה. מידע שסימנתם כפרטי נשמר פרטי. אנחנו משתמשים ב-Supabase
+          לאחסון מאובטח של הנתונים.
+        </p>
+      </section>
 
-          <section>
-            <h2 className="font-bold text-base mb-2">3. שימוש במידע</h2>
-            <p>אנו משתמשים במידע שנאסף כדי:</p>
-            <ul className="list-disc list-inside space-y-1 text-allay-muted mt-1">
-              <li>לספק את שירות ההמלצות ולהציג את הרשת החברתית שלכם</li>
-              <li>לשלוח התראות על פעילות רלוונטית בחשבונכם</li>
-              <li>לשפר ולאבטח את הפלטפורמה</li>
-              <li>לעמוד בדרישות חוקיות</li>
-            </ul>
-          </section>
+      <section className="mb-6">
+        <h2 className="font-semibold text-base mb-2">מחיקת חשבון</h2>
+        <p>
+          תוכלו למחוק את חשבונכם בכל עת דרך הגדרות האפליקציה. מחיקת חשבון
+          מסירה את כל הנתונים האישיים שלכם מהמערכת.
+        </p>
+      </section>
 
-          <section>
-            <h2 className="font-bold text-base mb-2">4. שיתוף מידע</h2>
-            <p>
-              אנו לא מוכרים או משכירים את המידע האישי שלכם לצדדים שלישיים.
-              המידע הציבורי שלכם (שם, המלצות, דירוגים) גלוי למשתמשים אחרים
-              ברשת שלכם בהתאם להגדרות הפרטיות שבחרתם.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-bold text-base mb-2">5. ספקי צד שלישי</h2>
-            <p>
-              אנו משתמשים ב-Supabase לניהול נתונים ואימות משתמשים,
-              וב-Google/Apple/Facebook לכניסה חברתית. לכל ספק מדיניות פרטיות משלו.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-bold text-base mb-2">6. אבטחת מידע</h2>
-            <p>
-              אנו נוקטים באמצעים טכניים וארגוניים סבירים להגנה על המידע שלכם,
-              כולל הצפנה בתעבורה (HTTPS) ואחסון מאובטח.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-bold text-base mb-2">7. זכויותיכם</h2>
-            <p>
-              יש לכם זכות לעיין, לתקן או למחוק את המידע האישי שלכם.
-              לבקשות פרטיות, צרו קשר בכתובת: <strong>privacy@allaay.app</strong>
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-bold text-base mb-2">8. מחיקת נתונים</h2>
-            <p>
-              בקשת מחיקת נתונים ניתן לשלוח לכתובת privacy@allaay.app.
-              נטפל בבקשה תוך 30 יום.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-bold text-base mb-2">9. יצירת קשר</h2>
-            <p>
-              לשאלות בנוגע למדיניות פרטיות זו, ניתן לפנות אלינו בכתובת:{' '}
-              <strong>privacy@allaay.app</strong>
-            </p>
-          </section>
-
-        </div>
-      </div>
-    </div>
+      <section className="mb-6">
+        <h2 className="font-semibold text-base mb-2">יצירת קשר</h2>
+        <p>
+          לשאלות בנוגע לפרטיות פנו אלינו בדוא"ל:{' '}
+          <a href="mailto:shaigian1@gmail.com" className="underline">
+            shaigian1@gmail.com
+          </a>
+        </p>
+      </section>
+    </main>
   );
 }
