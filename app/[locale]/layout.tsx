@@ -51,7 +51,5 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   );
 }
 
-// Generate static params for all locales
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
+// Force dynamic rendering — all locale routes use Supabase auth cookies/headers
+export const dynamic = 'force-dynamic';
